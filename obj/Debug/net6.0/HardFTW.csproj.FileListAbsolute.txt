@@ -1,0 +1,5 @@
+/Users/yoan/Library/Application Support/Terraria/tModLoader/ModSources/HardFTW/obj/Debug/net6.0/HardFTW.csproj.AssemblyReference.cache
+/Users/yoan/Library/Application Support/Terraria/tModLoader/ModSources/HardFTW/obj/Debug/net6.0/HardFTW.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yoan/Library/Application Support/Terraria/tModLoader/ModSources/HardFTW/obj/Debug/net6.0/HardFTW.AssemblyInfoInputs.cache
+/Users/yoan/Library/Application Support/Terraria/tModLoader/ModSources/HardFTW/obj/Debug/net6.0/HardFTW.AssemblyInfo.cs
+/Users/yoan/Library/Application Support/Terraria/tModLoader/ModSources/HardFTW/obj/Debug/net6.0/HardFTW.csproj.CoreCompileInputs.cache

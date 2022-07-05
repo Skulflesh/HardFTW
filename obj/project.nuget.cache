@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "IzwJxjZC1V4uA0Ahc1MaQSV4wTDbJAqBOX5FyeZJYcOWph7X4OEhdBTHbHkK2+BpvrNjjarD0GbmF3zI1PeYLA==",
+  "success": true,
+  "projectFilePath": "/Users/yoan/Library/Application Support/Terraria/tModLoader/ModSources/HardFTW/HardFTW.csproj",
+  "expectedPackageFiles": [
+    "/Users/yoan/.nuget/packages/tmodloader.codeassist/0.1.5/tmodloader.codeassist.0.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}

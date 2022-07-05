@@ -1,0 +1,21 @@
+This mod increases the difficulty of the FTW seed a bit by removing sequence skipping and changing a few bosses and enemies.
+[c/E11919:NOTE: ANY ITEMS WITH GREY TEXT MEANS THAT] [c/E11919:THEY ARE UNUSABLE AT THE MOMENT, THEY] [c/E11919:WILL BECOME USABLE ONCE YOU DEFEAT THEIR] [c/E11919:RESPECTIVE BOSS]
+[c/AF4BFF:Text in purple shows notes that may impact your] [c/AF4BFF:experience]
+Mod changes stuff through pre-hardmode.
+This is my first mod.
+This mod only runs while FTW is active.
+
+So far:
+- [c/AF4BFF:Evil biome stone cannot be blown up until] [c/AF4BFF: their respective boss is defeated]
+- (Use the purification powder like it was intended)
+- [c/AF4BFF:Shadow Orbs / Crimson Hearts are now] [c/AF4BFF:unable to be destroyed by explosives until ] [c/AB4BFF:their boss is defeated.]
+- [c/AF4BFF:Rebalanced the BoC and EoW bosses]
+- [c/AF4BFF:Shadow scales/ Tissue samples awarded on kill]
+- Buffed the King Slime´s HP
+- Lazy golem buff.
+- Progression locked the Demonite/Crimtane ore
+- Progression locked all fishing crates that gave floating island loot
+- Progression locked all dungeon items and shadow chest items.
+- Gave knockback Resistance to some enemies (not working, might fix later)
+- More progression locked items.
+- More coming soon (Maybe)
