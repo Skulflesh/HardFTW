@@ -29,21 +29,21 @@ namespace HardFTW
 	public class HardFTWGlobalItem : GlobalItem
 	{
         // Loot from segments/creepers to the bags
-        public override void OpenVanillaBag(string context, Player player, int arg)
+        public override void ModifyItemLoot(Item item, ItemLoot itemLoot)
         {
-            base.OpenVanillaBag(context, player, arg);
+            base.ModifyItemLoot(item, itemLoot);
             if (Main.getGoodWorld == true)
             {
-                if (arg == ItemID.BrainOfCthulhuBossBag)
+                if (item.type == ItemID.BrainOfCthulhuBossBag)
                 {
-                    player.QuickSpawnItem(player.GetSource_OpenItem(ItemID.BrainOfCthulhuBossBag), ItemID.TissueSample, Main.rand.Next(160, 220));
+                    itemLoot.Add(ItemDropRule.Common(ItemID.TissueSample, 1, 15, 35));
+                    itemLoot.Add(ItemDropRule.Common(ItemID.CrimtaneOre, 1, 110, 160));
                 }
-                if (arg == ItemID.EaterOfWorldsBossBag)
+                if (item.type == ItemID.EaterOfWorldsBossBag)
                 {
-                    player.QuickSpawnItem(player.GetSource_OpenItem(ItemID.EaterOfWorldsBossBag), ItemID.ShadowScale, Main.rand.Next(160, 220));
-                    player.QuickSpawnItem(player.GetSource_OpenItem(ItemID.EaterOfWorldsBossBag), ItemID.DemoniteOre, Main.rand.Next(100, 100));
+                    itemLoot.Add(ItemDropRule.Common(ItemID.ShadowScale, 1, 80, 110));
+                    itemLoot.Add(ItemDropRule.Common(ItemID.DemoniteOre, 1, 40, 60));
                 }
-         
             }
         }
 
@@ -115,7 +115,7 @@ namespace HardFTW
             {
                 if (NPC.downedBoss3 == false)
                 {
-                    /*if (item.type == ItemID.BalloonPufferfish || item.type == ItemID.SharkronBalloon || item.type == ItemID.BalloonHorseshoeSharkron || item.type == ItemID.ShinyRedBalloon || item.type == ItemID.HoneyBalloon || item.type == ItemID.BlizzardinaBalloon || item.type == ItemID.CloudinaBalloon || item.type == ItemID.FartInABalloon || item.type == ItemID.SandstorminaBalloon || item.type == ItemID.BundleofBalloons || item.type == ItemID.WhiteHorseshoeBalloon || item.type == ItemID.YellowHorseshoeBalloon || item.type == ItemID.BlueHorseshoeBalloon || item.type == ItemID.BalloonHorseshoeFart || item.type == ItemID.BalloonHorseshoeHoney || item.type == ItemID.CreativeWings || item.type == ItemID.CobaltShield || item.type == ItemID.ObsidianShield || item.type == ItemID.TreasureMagnet)
+                    if (item.type == ItemID.BalloonPufferfish || item.type == ItemID.SharkronBalloon || item.type == ItemID.BalloonHorseshoeSharkron || item.type == ItemID.ShinyRedBalloon || item.type == ItemID.HoneyBalloon || item.type == ItemID.BlizzardinaBalloon || item.type == ItemID.CloudinaBalloon || item.type == ItemID.FartInABalloon || item.type == ItemID.SandstorminaBalloon || item.type == ItemID.BundleofBalloons || item.type == ItemID.WhiteHorseshoeBalloon || item.type == ItemID.YellowHorseshoeBalloon || item.type == ItemID.BlueHorseshoeBalloon || item.type == ItemID.BalloonHorseshoeFart || item.type == ItemID.BalloonHorseshoeHoney || item.type == ItemID.CreativeWings || item.type == ItemID.CobaltShield || item.type == ItemID.ObsidianShield || item.type == ItemID.TreasureMagnet)
                     {
                         //tooltips.RemoveAll(x => x.Name == "Tooltip0" && x.Mod == "Terraria");
                         TooltipLine line = tooltips.FirstOrDefault(x => x.Name == "Tooltip0" && x.Mod == "Terraria");
@@ -141,7 +141,7 @@ namespace HardFTW
                         {
                             line.Text = "Cannot be used pre-Skeletron";
                         }
-                    }*/
+                    }
                     if (item.type == ItemID.FloatingIslandFishingCrate || item.type == ItemID.LockBox)
                     {
                         //tooltips.RemoveAll(x => x.Name == "Tooltip0" && x.Mod == "Terraria");
@@ -172,7 +172,7 @@ namespace HardFTW
                 }
                 if (NPC.downedBoss2 == false)
                 {
-                    /*if (item.type == ItemID.FrogLeg || item.type == ItemID.FrogFlipper || item.type == ItemID.FrogWebbing || item.type == ItemID.FrogGear || item.type == ItemID.AmphibianBoots || item.type == ItemID.MeteorHelmet || item.type == ItemID.MeteorSuit || item.type == ItemID.MeteorLeggings)
+                    if (item.type == ItemID.FrogLeg || item.type == ItemID.FrogFlipper || item.type == ItemID.FrogWebbing || item.type == ItemID.FrogGear || item.type == ItemID.AmphibianBoots || item.type == ItemID.MeteorHelmet || item.type == ItemID.MeteorSuit || item.type == ItemID.MeteorLeggings)
                     {
                         //tooltips.RemoveAll(x => x.Name == "Tooltip0" && x.Mod == "Terraria");
                         TooltipLine line = tooltips.FirstOrDefault(x => x.Name == "Tooltip0" && x.Mod == "Terraria");
@@ -189,14 +189,29 @@ namespace HardFTW
                         {
                             line.Text = "Cannot be used before BoC/EoW";
                         }
-                    }*/
+                    }
+                    if (item.type == ItemID.Bomb || item.type == ItemID.Dynamite || item.type == ItemID.ScarabBomb || item.type == ItemID.Explosives)
+                    {
+                        //tooltips.RemoveAll(x => x.Name == "Tooltip0" && x.Mod == "Terraria");
+                        TooltipLine line = tooltips.FirstOrDefault(x => x.Name == "Tooltip0" && x.Mod == "Terraria");
+                        if (line != null)
+                        {
+                            if (WorldGen.crimson == true)
+                            {
+                                line.Text = "Cannot blow up Crimstone pre Brain of Cthulhu.";
+                            } else
+                            {
+                                line.Text = "Cannot blow up Ebonstone pre Eater of Worlds.";
+                            }
+                        }
+                    }
                     if (item.type == ItemID.MeteoriteBar)
                     {
                         //tooltips.RemoveAll(x => x.Name == "Tooltip0" && x.Mod == "Terraria");
                         TooltipLine line = tooltips.FirstOrDefault(x => x.Name == "Tooltip0" && x.Mod == "Terraria");
                         if (line != null)
                         {
-                            line.Text = "Items crafted cannot be used pre-Skeletron";
+                            line.Text = "Most items crafted cannot be used pre-Skeletron";
                         }
                     }
                 }
@@ -220,10 +235,6 @@ namespace HardFTW
                         item.rare = -1;
                     }
                     if (item.type == ItemID.Sunfury || item.type == ItemID.Handgun || item.type == ItemID.PhoenixBlaster || item.type == ItemID.BlueMoon || item.type == ItemID.Muramasa || item.type == ItemID.Valor || item.type == ItemID.AquaScepter || item.type == ItemID.MagicMissile || item.type == ItemID.NightsEdge)
-                    {
-                        item.rare = -1;
-                    }
-                    if (item.type == ItemID.FloatingIslandFishingCrate)
                     {
                         item.rare = -1;
                     }

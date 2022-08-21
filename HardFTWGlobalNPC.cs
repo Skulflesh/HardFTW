@@ -21,6 +21,7 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.Utilities;
+using System.Data;
 
 namespace HardFTW
 {
@@ -135,7 +136,7 @@ namespace HardFTW
 					if (npc.type == NPCID.EaterofWorldsHead || npc.type == NPCID.EaterofWorldsBody || npc.type == NPCID.EaterofWorldsTail)
 					{
 						Conditions.LegacyHack_IsBossAndNotExpert bossAndNotExpert = new Conditions.LegacyHack_IsBossAndNotExpert();
-						npcLoot.Add(ItemDropRule.ByCondition(bossAndNotExpert, ItemID.ShadowScale, 1, 83, 163, 1));
+						npcLoot.Add(ItemDropRule.ByCondition(bossAndNotExpert, ItemID.ShadowScale, 1, 73, 113, 1));
 					}
 				}
 				if (npc.type == NPCID.EaterofWorldsHead || npc.type == NPCID.EaterofWorldsBody || npc.type == NPCID.EaterofWorldsTail)
@@ -151,11 +152,25 @@ namespace HardFTW
 							&& expertDropRule.itemId == ItemID.ShadowScale
 					);
 				}
-				if (npc.type == NPCID.BrainofCthulhu && Main.expertMode == false && Main.masterMode == false)
-				{
-					npcLoot.Add(ItemDropRule.Common(ItemID.TissueSample, 1, 53, 133));
-				}
-			}
+                if (npc.type == NPCID.Creeper)
+                {
+                    npcLoot.RemoveWhere(
+                        rule => rule is DropBasedOnExpertMode drop
+                            && drop.ruleForNormalMode is CommonDrop normalDropRule
+                            && normalDropRule.itemId == ItemID.CrimtaneOre
+                    );
+                    npcLoot.RemoveWhere(
+                        rule => rule is DropBasedOnExpertMode drop
+                            && drop.ruleForExpertMode is CommonDrop expertDropRule
+                            && expertDropRule.itemId == ItemID.CrimtaneOre
+                    );
+                    npcLoot.Add(ItemDropRule.Common(ItemID.CrimtaneOre, 2, 2, 5));
+                }
+                if (npc.type == NPCID.BrainofCthulhu)
+                {
+                    npcLoot.Add(ItemDropRule.Common(ItemID.TissueSample, 1, 70, 100));
+                }
+            }
 		}
 	}
 }

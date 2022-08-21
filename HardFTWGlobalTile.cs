@@ -63,7 +63,7 @@ namespace HardFTW
             {
                 if (NPC.downedBoss3 == false)
                 {
-                    if (type == TileID.BlueDungeonBrick || type == TileID.GreenDungeonBrick || type == TileID.PinkDungeonBrick || type == WallID.PinkDungeonUnsafe || type == WallID.PinkDungeonSlabUnsafe || type == WallID.PinkDungeonTileUnsafe || type == WallID.GreenDungeonUnsafe || type == WallID.GreenDungeonSlabUnsafe || type == WallID.GreenDungeonTileUnsafe || type == WallID.BlueDungeonUnsafe || type == WallID.BlueDungeonSlabUnsafe || type == WallID.BlueDungeonTileUnsafe)
+                    if (type == TileID.BlueDungeonBrick || type == TileID.GreenDungeonBrick || type == TileID.PinkDungeonBrick)
                     {
                         return false;
                     }
@@ -89,6 +89,7 @@ namespace HardFTW
             }
             return base.CanKillTile(i, j, type, ref blockDamaged);
         }
+
         public override bool Slope(int i, int j, int type)
         {
             if (Main.getGoodWorld)
