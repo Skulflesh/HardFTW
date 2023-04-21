@@ -1,4 +1,4 @@
 displayName = Harder For The Worthy
 author = Skullflesh
-version = 0.5.1
+version = 0.5.4
 hideCode = true

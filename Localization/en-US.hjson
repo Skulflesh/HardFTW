@@ -1,0 +1,35 @@
+Mods: {
+	HardFTW: {
+		Items: {
+			LockedSkyCrate: {
+				DisplayName: Locked Sky Crate
+				Tooltip:
+					'''
+					Right Click to open
+					Requires a Golden Key.
+					'''
+			}
+
+			CultistTablet: {
+				DisplayName: Cultist Tablet
+				Tooltip: ""
+			}
+		}
+
+		NPCs: {
+			PhantasmDragon.DisplayName: Phantasm Wyvern
+			PhantasmDragonHead.DisplayName: Phantasm Wyvern Head
+			"Phantasm Wyvern.DisplayName": Phantasm  Wyvern
+			"[c/000000:PhantasmDragon].DisplayName": "[c/000000: Phantasm Wyvern]"
+		}
+
+		Conditions: {
+			PostEoC: Defeated Eye of Cthulhu
+			PostEvilBoss: Defeated Brain/Eater boss
+			PostSkele: Defeated Skeletron
+			PostBee: Defeated Queen Bee
+		}
+
+		Projectiles.ExplBunnyPet.DisplayName: Expl Bunny Pet
+	}
+}

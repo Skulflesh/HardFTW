@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "IzwJxjZC1V4uA0Ahc1MaQSV4wTDbJAqBOX5FyeZJYcOWph7X4OEhdBTHbHkK2+BpvrNjjarD0GbmF3zI1PeYLA==",
+  "dgSpecHash": "l6v8cLHzTUyumoRWiEVTBFVN2EyHzr+Zq4iaQySwuN9lRDW+06azuQrQxGVeqJEx6M0VZaVDkEY0ceEtIMVHQg==",
   "success": true,
-  "projectFilePath": "/Users/yoan/Library/Application Support/Terraria/tModLoader/ModSources/HardFTW/HardFTW.csproj",
+  "projectFilePath": "C:\\Users\\yoanl\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\HardFTW\\HardFTW.csproj",
   "expectedPackageFiles": [
-    "/Users/yoan/.nuget/packages/tmodloader.codeassist/0.1.5/tmodloader.codeassist.0.1.5.nupkg.sha512"
+    "C:\\Users\\yoanl\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
   ],
   "logs": []
 }

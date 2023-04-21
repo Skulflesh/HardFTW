@@ -1,18 +1,25 @@
 This mod increases the difficulty of the FTW seed a bit by removing sequence skipping and changing a few bosses and enemies.
-Most progression skipped items will not be useable/ equippable before their respective boss has been defeated.
-This includes: Meteor items, all balloons with upgrades (including puffer), frog legs and some more
+[c/E11919:NOTE: ANY ITEMS THAT ARE PART OF A] [c/E11919:PROGRESSION SKIP WILL BE UNUSABLE] [c/E11919:AND BECOME USABLE ONCE YOU DEFEAT THEIR] [c/E11919:RESPECTIVE BOSS]
+[c/AF4BFF:Text in purple shows notes that may impact your] [c/AF4BFF:experience]
 Mod changes stuff through pre-hardmode.
-First mod, criticism welcome.
-This mod is only active while FTW is active.
+This mod is not reccommended for people who enjoy progression skips.
+This mod only runs while FTW is active.
+
 
 So far:
-- Evil biome stone cannot be blown up until their respective boss is defeated (Use the purification powder like it was intended)
-- Shadow Orbs / Crimson Hearts are now unable to be destroyed by explosives until their boss is defeated.
-- Rebalanced the BoC and EoW bosses
-- Shadow scales/ Tissue samples awarded on kill
-- Buffed the King Slime´s HP
+- [c/AF4BFF:Evil biome stone cannot be blown up until] [c/AF4BFF: their respective boss is defeated]
+- (Use the purification powder like it was intended)
+- [c/AF4BFF:Shadow Orbs / Crimson Hearts are now] [c/AF4BFF:unable to be destroyed by explosives until ] [c/AB4BFF:their boss is defeated.]
+- [c/AF4BFF:Rebalanced the BoC and EoW bosses]
+- [c/AF4BFF:Shadow scales/ Tissue samples awarded only on kill]
+- Buffs and tweaks to some enemies.
 - Lazy golem buff.
-- Progression locked the Demonite/Crimtane ore
-- Gave knockback Resistance to some enemies (not working, might fix later)
+- [c/AF4BFF:Progression locked a ton of stuff to make early-early game more of a challenge.]
+- Gave knockback Resistance to some enemies (most working, most in hardmode)
 - More progression locked items.
+- Hopefully a toggle for progression locked items (TBA)
 - More coming soon (Maybe)
+
+Latest changes v0.6.1:
+- Made compatible with 1.4.4
+- Fixed some tooltips.

@@ -13,7 +13,4 @@
   <ItemGroup>
     <None Remove="Items\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Items\" />
-  </ItemGroup>
 </Project>
